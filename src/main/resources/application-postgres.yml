@@ -1,0 +1,6 @@
+# Activate with SPRING_PROFILES_ACTIVE=postgres (docker-compose.yml does this for you).
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/stockflow}
+    username: ${DB_USERNAME:stockflow}
+    password: ${DB_PASSWORD:stockflow}

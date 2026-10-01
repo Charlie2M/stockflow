@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: stockflow
+  # No datasource configured on purpose: with H2 on the classpath, Spring Boot starts
+  # an in-memory database, so the app runs with zero setup. See application-postgres.yml
+  # for a real database.
+  jpa:
+    # Flyway owns the schema (src/main/resources/db/migration). Hibernate never changes it.
+    hibernate:
+      ddl-auto: none
+    # Each request works inside the service layer's transaction only. Lazy loading from
+    # controllers is disabled, which keeps queries predictable.
+    open-in-view: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
