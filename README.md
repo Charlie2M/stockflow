@@ -1,6 +1,6 @@
 # StockFlow
 
-![CI](https://github.com/YOUR_GITHUB_USERNAME/stockflow/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/Charlie2M/stockflow/actions/workflows/ci.yml/badge.svg)
 
 A REST API for a retail chain with several stores: it books supplier deliveries, keeps stock
 levels per store and moves goods between stores. Every unit that enters or leaves a store is
